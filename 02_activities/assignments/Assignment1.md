@@ -106,6 +106,8 @@ Please do not pick the exact same tables that I have already diagrammed. For exa
 	- <img src="./images/01_farmers_market_conceptual_model.png" width="600">
 - The column names can be found in a few spots (DB Schema window in the bottom right, the Database Structure tab in the main window by expanding each table entry, at the top of the Browse Data tab in the main window)
 
+- 
+
 ***
 
 ## Section 2:
@@ -205,5 +207,11 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 
 ```
-Your thoughts...
+Value systems embedded in data systems can exert profound impact on individuals’ daily lives. For instance, in Pakistan, the National Database and Registration Authority (NADRA) at its creation adhered to the prevailing social norms regarding family structure. The assumption that households consist of two biological parents – a father and a mother – were incorporated in its structure. This design excludes nontraditional families, such as single-parent households and those with adoptive relationships, from equitable access to essential civic services and rights. Additionally, the absence of progressive planning for potential social changes has made it difficult to revise the system in response to evolving social norms, highlighting the needs for inclusive and flexible database development.
+Recognizing the diversity is crucial for the effective design of databases. This understanding ensures that the databases can accommodate the need of individuals from different social and cultural backgrounds. Take NADRA for example, database design with respect to family structure could align better with public demand by using fields like “Parent 1” and “Parent 2” instead of “Father” and “Mother”. Allowing multiple guardian entries could also meet the needs of families from informal settlements and Indigenous territories. Other examples include marital status and age-related information. Offering the option of open text field alongside pre-specified categories of marital status provides makes the room for a broader spectrum of relationships. Considering the varied approaches to age calculation across different cultural contexts, recording the exact date, month, and year of birth is a more consistent approach than simply inputting age, which affects precision and accuracy.
+Inclusiveness as opposed to marginalization is another value system underpinning the development of databases in daily use. For example, a gender scheme designed as an enumerated data type capable of holding different values aligns with the understanding that gender is not limited to binary options. 
+A similar principle applies to race and ethnicity as well. A design that enables the flexibility to adjust and add categories based on frequently updated official ethnicity codelist ensures that the database remains accurate, inclusive, and reflective of the evolving and complex classifications. For example, including an option for Middle Eastern or North African descent, which was historically grouped under the “White” category, provides better recognition for underrepresented groups. Additionally, the inclusion of options for multiracial individuals, allowing them to designate a multiracial identity and offering free-text fields for those who do not align with predefined categories, demonstrates how flexible design can better reflect the diverse realities and benefit inclusiveness. Making such fields optional and providing “prefer not to say” option respects individual autonomy and further prevents misuse of personal data in potential discriminatory exercises.
+Another example is the handling of Indigenous naming conventions, which often include single names, clan names or complex lineage-based identifiers that do not fit into the rigid first-name, last-name structures. Neglecting cultural differences forces Indigenous populations to adapt their names to a framework that does not reflect their cultures, leading to marginalization and unequal access to essential services.
+In summary, value systems play a crucial role in shaping databases used in daily life. Design choices that prioritize inclusiveness and flexibility establish a solid foundation for databases that are adaptable, culturally sensitive, and capable of addressing the variety of needs of the population they serve. 
+
 ```
