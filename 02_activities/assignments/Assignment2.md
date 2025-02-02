@@ -45,16 +45,28 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+<img src="./images/smallbookstore_prompt1.jpg" width="600">
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+<img src="./images/smallbookstore_prompt2.jpg" width="600">
 
 #### Prompt 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2? 
 
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
+Figure Prompt 3a
+<img src="./images/smallbookstore_prompt3a.jpg" width="600">
+
+Figure Prompt 3b
+<img src="./images/smallbookstore_prompt3b.jpg" width="600">
+
 ```
-Your answer...
+The Customer_address table in Figure Prompt 3a follows a Type 2 approach, which retains historical changes by adding a new row for each new customer address while maintaining the existing row for record-keeping purposes. The address_id serves as the primary key, ensuring uniqueness for each address change. A one-to-many relationship exists between the customer table and the customer_address table, as a single customer may have multiple address changes over time. The is_current column indicates whether a record represents the current address; if it does, the end_date value remains null.
+
+In contrast, the Customer_address table in Figure Prompt 3b follows a Type 1 approach, which overwrites the existing address when a new address is added, without preserving historical records. It maintains a one-to-one relationship with the customer table, meaning that each customer has only their most recent address stored in the table. The last_update column records the date of the most recent address modification.
 ```
 
 ***
@@ -182,5 +194,12 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+The article emphasizes the often-overlooked role of human effort and decision-making in the development and operations of high-tech neural networks. For instance, the accuracy and efficiency of image recognition systems heavily rely on large datasets labeled by human workers, whose decisions shape AI’s performance. This dependence on human labor exposes ethical concerns regarding the invisible workforce behind these advanced AI systems.
+
+Similar to the “Mechanical Turk” example discussed in the article, thousands of workers, many from developing countries and marginalized communities, perform essential tasks for minimal wages, and form the backbone of AI systems which are now deeply integrated into our daily life. Despite their critical contributions, these workers remain significantly underpaid, subjected to harmful working conditions, and underappreciated. For example, OpenAI outsourced content moderation tasks to companies which hired workers in Kenya to filter toxic content at wage as low as $2 per hour. These workers had to work long hours to review disturbing materials, including violent and sexually abuse content, which lead to severe psychological distress and trauma. Their exposure to such harmful content, coupled with inadequate compensation and lack of support, underscores the ethical shortcomings of AI labor practices and urgent needs for strong labor protection and ethical regulations.
+
+Additionally, another ethical issue highlighted in this article is the risk of biased training data, which will lead neural networks to reflect and amplify existing societal biases. Similar to the fairness issues in the data collection for ImageNet mentioned in the article, biased labeling in the training data contributes to inaccuracies and reinforce existing inequalities. Examples include facial recognition systems, where training data that overrepresent white individuals may result in errors when identifying people of color. Similarly, crime-related data that disproportionately focus on Black neighborhoods can introduce racial bias into crime rate predictions. Unfairness may also result from flawed algorithmic design. Developers may apply biased weighting factors, whether consciously or unconsciously, in decision-making processes. For example, algorithms that incorporate indicators such as income may inadvertently discriminate against certain racial or gender groups, reinforcing socioeconomic disparities.
+
+In summary, AI is reliant and shaped by human labor, making it neither neutral nor free from ethical challenges. Implementing better labor protections, bias mitigation strategies, and enforcing stricter regulations are essential to ensure that AI serves society in a fair and equitable way.
+
 ```
